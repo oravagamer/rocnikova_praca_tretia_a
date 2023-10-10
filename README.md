@@ -1,1 +1,0 @@
-# rocnikova_praca_tretia_a
