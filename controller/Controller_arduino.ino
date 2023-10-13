@@ -3,9 +3,9 @@
 #define joyX A0
 #define joyY A1
 
-BLEService controllerService("19B10000-E8F2-537E-4F6C-D104768A1214");
+BLEService controllerService("17bf9a4a-6d20-454e-9c11-e4580cc74424");
 
-BLEByteCharacteristic joystickCharacteristic("19B10001-E8F2-537E-4F6C-D104768A1214", BLEWrite | BLERead);
+BLEByteCharacteristic joystickCharacteristic("17bf9a4a-6d20-454e-9c11-e4580cc74424", BLEWrite | BLERead);
 
 void setup() {
   Serial.begin(9600);
@@ -16,7 +16,7 @@ void setup() {
     while (1);
   }
 
-  BLE.setLocalName("Controller 1");
+  BLE.setLocalName("pong-game-arcade-controller-1");
   BLE.setAdvertisedService(controllerService);
 
   controllerService.addCharacteristic(joystickCharacteristic);
