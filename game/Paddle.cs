@@ -1,12 +1,14 @@
 using Godot;
 
 public partial class Paddle : Area2D {
+    [Signal]
+    public delegate void BallCollisionEventHandler();
+
     [Export] public int Speed { get; set; } = 400;
     [Export] public string GamePad { get; set; } = "0";
-    
+
     private Vector2 _screenSize;
     private float _height;
-    
 
     public override void _Ready() {
         _screenSize = GetViewportRect().Size;
@@ -28,5 +30,14 @@ public partial class Paddle : Area2D {
         Position = new Vector2(
             x: Position.X,
             y: Mathf.Clamp(Position.Y, 0 + _height / 2, _screenSize.Y - _height / 2));
+    }
+
+    private void OnBodyEntered(PhysicsBody2D body) {
+        EmitSignal(SignalName.BallCollision);
+        
+    }
+
+    public void Start(Vector2 position) {
+        Position = position;
     }
 }

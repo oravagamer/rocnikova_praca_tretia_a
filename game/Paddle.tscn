@@ -20,3 +20,5 @@ shape = SubResource("RectangleShape2D_qlr1e")
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]
 mesh = SubResource("QuadMesh_1mtvi")
 texture = SubResource("CanvasTexture_q728g")
+
+[connection signal="body_entered" from="." to="." method="OnBodyEntered"]
