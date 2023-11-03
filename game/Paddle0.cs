@@ -1,6 +1,6 @@
 using Godot;
 
-public partial class Paddle : Area2D {
+public partial class Paddle0 : Area2D {
     [Export] public int Speed { get; set; } = 400;
     public Vector2 ScreenSize;
 
