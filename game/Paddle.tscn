@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://dcljfso3ra5y1"]
+[gd_scene load_steps=5 format=3 uid="uid://bnvc2e5f1yb2m"]
 
-[ext_resource type="Script" path="res://Paddle0.cs" id="1_pnf8q"]
+[ext_resource type="Script" path="res://Paddle.cs" id="1_3f3dj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qlr1e"]
 size = Vector2(25, 150)
@@ -10,9 +10,9 @@ size = Vector2(25, 150)
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_q728g"]
 
-[node name="Paddle0" type="Area2D"]
+[node name="Paddle" type="Area2D"]
 position = Vector2(112.5, 300)
-script = ExtResource("1_pnf8q")
+script = ExtResource("1_3f3dj")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_qlr1e")
