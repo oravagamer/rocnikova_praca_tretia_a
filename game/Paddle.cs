@@ -29,7 +29,8 @@ public partial class Paddle : Area2D {
         Position += velocity.Normalized() * Speed * (float)delta;
         Position = new Vector2(
             x: Position.X,
-            y: Mathf.Clamp(Position.Y, 0 + _height / 2, _screenSize.Y - _height / 2));
+            y: Mathf.Clamp(Position.Y, 0 + _height / 2, _screenSize.Y - _height / 2)
+        );
     }
 
     private void OnBodyEntered(PhysicsBody2D body) {

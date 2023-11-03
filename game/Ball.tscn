@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=3 uid="uid://c6mix5nd8tp6o"]
+[gd_scene load_steps=5 format=3 uid="uid://c6mix5nd8tp6o"]
 
 [ext_resource type="Script" path="res://Ball.cs" id="1_4wbvm"]
 
@@ -8,8 +8,11 @@ size = Vector2(25, 25)
 [sub_resource type="QuadMesh" id="QuadMesh_s6mkb"]
 size = Vector2(25, 25)
 
+[sub_resource type="CanvasTexture" id="CanvasTexture_63bqd"]
+
 [node name="Ball" type="RigidBody2D"]
 position = Vector2(400, 300)
+gravity_scale = 0.0
 script = ExtResource("1_4wbvm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -17,3 +20,4 @@ shape = SubResource("RectangleShape2D_piy4a")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="."]
 mesh = SubResource("QuadMesh_s6mkb")
+texture = SubResource("CanvasTexture_63bqd")
