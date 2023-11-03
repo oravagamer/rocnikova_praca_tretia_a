@@ -1,3 +1,16 @@
-[gd_scene format=3 uid="uid://dyxae5fjflf2j"]
+[gd_scene load_steps=3 format=3 uid="uid://dyxae5fjflf2j"]
+
+[ext_resource type="PackedScene" uid="uid://bnvc2e5f1yb2m" path="res://Paddle.tscn" id="1_r3n2i"]
+[ext_resource type="PackedScene" uid="uid://c6mix5nd8tp6o" path="res://Ball.tscn" id="2_gbnwh"]
 
 [node name="Main" type="Node"]
+
+[node name="Paddle0" parent="." instance=ExtResource("1_r3n2i")]
+
+[node name="Paddle1" parent="." instance=ExtResource("1_r3n2i")]
+GamePad = "1"
+
+[node name="Ball" parent="." instance=ExtResource("2_gbnwh")]
+
+[node name="StartPosition" type="Marker2D" parent="."]
+position = Vector2(400, 300)
